@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+      --color-menu-overlay: rgb(78, 245, 28);
+      --color-menu-text: black;
+      --color-divider: black;
+}
+
+
+
+*{
+     box-sizing: border-box; 
+}
+
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'poppins', sans-serif !important;
+}
+
+
+.wrapper{
+      width: 100%;
+      height: 100%;
+}
+
+
+
+.logo {
+      line-height: 40px;
+      float: left;
+      margin: 1.2em 0 0 2.2em;
+      font-weight: bolder;
+      color: #fff;
+}
+
+
+
+.side-strip {
+      position: absolute;
+      top: 70%;
+      transform: translateY(-50%);
+      right: -4em;
+      transform: rotate(90deg);
+      color: #fff;
+      letter-spacing: 4px;
+      cursor: pointer;
+      animation: slideIn 1s infinite alternate; 
+}
+
+@keyframes slideIn {
+      0% {
+        transform: translateY(0) rotate(90deg); 
+      }
+      100% {
+        transform: translateY(10px) rotate(90deg); 
+      }
+    }
+
+
+  span i {
+      animation: bounce 1s infinite alternate; 
+    }
+    
+    @keyframes bounce {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(10px);
+      }
+    }
+
+
+
+.header {
+      position: absolute;
+      top: 65%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+}
+
+.header h1 {
+      font-size: 4.5rem;
+      color: #fff;
+      font-weight: bolder;
+}
+
+.header h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 300;
+}
+
+.header p {
+      color: #fff;
+      font-weight: 300;
+      width: 55%;
+}
+
+.header button {
+      margin-top: 12px;
+      border-radius: 40px;
+      border: none;
+      padding: 16px 40px;
+      background: #fff;
+      color: #000;
+      letter-spacing: 4px;
+      font-weight: 600;
+      font-size: 12px;
+}
+
+
+.overlay {
+      z-index: 1000;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      top: 0%;
+}
+
+.overlay h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      font-weight: bolder;
+      letter-spacing: 12px;
+}
+
+ /* CSS for fullscreen overlay menu */
+ .toggle-btn {
+      position: fixed;
+      padding: 1em;
+      width: 40px;
+      height: 12px;
+      right: 0;
+      z-index: 3;
+      position: fixed;
+      font-size: 30px;
+      font-weight: lighter;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      animation: pulsate 1.5s ease infinite;
+  }
+
+  @keyframes pulsate {
+      0% {
+          transform: scale(1);
+      }
+      50% {
+          transform: scale(1.1);
+      }
+      100% {
+          transform: scale(1);
+      }
+  }
+
+ span.one {
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background: #fff;
+ }
+ 
+ span.two {
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background: #fff;
+      margin-top: 12px;
+ }
+ 
+ .menu {
+      z-index: 0;
+      position: absolute;
+      background: #101010;
+      height: 100vh;
+      width: 100%;
+      top: -100%;
+      z-index: 2;
+ 
+ .data {
+      padding: 8em 0 0 2em;
+      text-align: left;
+ }
+ 
+ ul {
+      list-style: none;
+ }
+ 
+ li:first-child {
+      color: grey;
+      font-family: Poppins;
+      font-size: 24px;
+ }
+ 
+ li:not(:first-child) {
+      color: #fff;
+      font-size: 42px;
+ }
+ 
+ a {
+      text-decoration: none;
+      color: #fff;
+      font-family: Poppins;
+ }
+
+ }
+
+
+
+ 
+
+
+
+@media screen and (max-width: 600px)
+{
+      .header {
+            position: absolute;
+            top: 65%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+      }
+
+      .header p{
+            width: 100%;
+      }  
+
+      .side-strip {
+            position: absolute;
+            top: 70%;
+            transform: translateY(-50%);
+            right: -4em;
+            letter-spacing: 4px;
+      }
+}
